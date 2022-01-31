@@ -1,0 +1,12 @@
+<h1>Current Player: {{ player }} </h1>
+
+<button nbButton outline status="danger" (click)="newGame()">Start new Game</button>
+
+
+<h2 *ngIf="winner">
+    {{ winner }}
+</h2>
+<div class="grid-container">
+    <div class="grid-item" *ngFor="let val of board; let i = index" (click)="makeMove(i)">
+    <button>{{val}}</button></div>
+</div>
